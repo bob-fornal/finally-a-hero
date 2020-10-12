@@ -6,23 +6,40 @@
     <title>Finally A Hero</title>
 
     <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/scramble.css" />
 
     <script src="js/templates.js"></script>
+    <script src="js/scramble.js"></script>
 </head>
 <body>
     <div class="nav-wrapper"></div>
     <script>
-        templates.init('navigation.html', '.nav-wrapper', 'index');
+        templates.initMenu('index');
     </script>
 
-    <div class="welcome-body">
-        <p>This is the welcome page - we can include/highlight the most recent survivor story.
-            add highlight some pages like stories, resources, and donations - similar to the original website home page.
 
-        </p>
+    <div class="outer-content">
+        <div class="scramble-wrapper"></div>
+        <script>
+            let scrambleCallback = () => {
+                scramble.init();
+            };
+    
+            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+        </script>    
+
+        <div class="inner-body-wrapper">
+            <div class="welcome-body">
+                <p>This is the welcome page - we can include/highlight the most recent survivor story.
+                    add highlight some pages like stories, resources, and donations - similar to the original website home page.
+        
+                </p>
+            </div>
+        
+            <div class="security-wrapper"></div>    
+        </div>
     </div>
 
-    <div class="security-wrapper"></div>
     <div class="footer-wrapper"></div>
     <script>
         templates.init('security.html', '.security-wrapper');

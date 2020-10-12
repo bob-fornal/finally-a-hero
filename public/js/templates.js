@@ -1,26 +1,34 @@
 
 const templates = {};
 
-templates.init = (filename, elementIdentifier, location = null) => {
+templates.init = (filename, elementIdentifier, callback = null) => {
   const templateLocation = `/templates/${ filename }`;
 
   fetch(templateLocation)
     .then(response => response.text())
-    .then(html => templates.placeHTML(html, elementIdentifier, location))
+    .then(html => templates.placeHTML(html, elementIdentifier, callback))
     .catch(err => console.log('Failed to fetch page: ', err));
 };
 
-templates.placeHTML = (html, elementIdentifier, location) => {
+templates.placeHTML = (html, elementIdentifier, callback) => {
   const parser = new DOMParser();
   const parsed = parser.parseFromString(html, 'text/html');
 
-  if (location !== null) {
-    const menuItem = parsed.querySelector(`.${ location }`);
-    menuItem.classList.add('active');  
+  if (callback !== null) {
+    callback(parsed);
   }
 
   const content = parsed.querySelector('.import-content');
   const domLocation = document.querySelector(elementIdentifier);
 
-  domLocation.appendChild(content);
+  domLocation.parentNode.replaceChild(content, domLocation);
+};
+
+templates.initMenu = (location) => {
+  let navCallback = (parsed) => {
+    const menuItem = parsed.querySelector(`.${ location }`);
+    menuItem.classList.add('active');
+  };
+
+  templates.init('navigation.html', '.nav-wrapper', navCallback);
 };

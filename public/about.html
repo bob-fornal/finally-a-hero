@@ -6,21 +6,38 @@
     <title>Finally A Hero</title>
 
     <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/scramble.css" />
 
     <script src="js/templates.js"></script>
+    <script src="js/scramble.js"></script>
 </head>
 <body>
     <div class="nav-wrapper"></div>
     <script>
-        templates.init('navigation.html', '.nav-wrapper', 'about');
+        templates.initMenu('about');
     </script>
 
-    <div class="about-body">
-        <p>This page would include part of Michelle's story and why she created Love Me Like a Princess/Finally A Hero.
-            We would include the mission and explain the origizations goals. Maybe highlight a link for submitting your own story.
-            I believe the submission for that would be moreso - sending your contact info and then Michelle getting in contact to set something up
-            rather than someone writing their story and submitting it. 
-        </p>
+    <div class="outer-content">
+        <div class="scramble-wrapper"></div>
+        <script>
+            let scrambleCallback = () => {
+                scramble.init();
+            };
+
+            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+        </script>    
+
+        <div class="inner-body-wrapper">
+            <div class="about-body">
+                <p>This page would include part of Michelle's story and why she created Love Me Like a Princess/Finally A Hero.
+                    We would include the mission and explain the origizations goals. Maybe highlight a link for submitting your own story.
+                    I believe the submission for that would be moreso - sending your contact info and then Michelle getting in contact to set something up
+                    rather than someone writing their story and submitting it. 
+                </p>
+            </div>
+                
+            <div class="security-wrapper"></div>    
+        </div>
     </div>
 
     <div class="security-wrapper"></div>

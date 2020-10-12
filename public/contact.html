@@ -6,19 +6,36 @@
     <title>Finally A Hero</title>
 
     <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/scramble.css" />
 
     <script src="js/templates.js"></script>
+    <script src="js/scramble.js"></script>
 </head>
 <body>
     <div class="nav-wrapper"></div>
     <script>
-        templates.init('navigation.html', '.nav-wrapper', 'contact');
+        templates.initMenu('contact');
     </script>
 
-    <div class="contact-body">
-        <p>This could be a simple contact form - information could also be stored in a database or just be sent directly to en email
+    <div class="outer-content">
+        <div class="scramble-wrapper"></div>
+        <script>
+            let scrambleCallback = () => {
+                scramble.init();
+            };
 
-        </p>
+            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+        </script>    
+
+        <div class="inner-body-wrapper">
+            <div class="contact-body">
+                <p>This could be a simple contact form - information could also be stored in a database or just be sent directly to en email
+        
+                </p>
+            </div>
+                        
+            <div class="security-wrapper"></div>    
+        </div>
     </div>
 
     <div class="security-wrapper"></div>

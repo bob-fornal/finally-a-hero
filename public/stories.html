@@ -6,21 +6,38 @@
     <title>Finally A Hero</title>
 
     <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/scramble.css" />
 
     <script src="js/templates.js"></script>
+    <script src="js/scramble.js"></script>
 </head>
 <body>
     <div class="nav-wrapper"></div>
     <script>
-        templates.init('navigation.html', '.nav-wrapper', 'stories');
+        templates.initMenu('stories');
     </script>
 
-    <div class="stories-body">
-        <p>This is the page where we will highlight stories. We could include all stories on this page with blurbs and then have a link that leads to
-            it's own page with the actual video whether that video is embedded onto a page for the website user gets
-            brought diretly to youtube - there's a couple ways we could set it up. 
+    <div class="outer-content">
+        <div class="scramble-wrapper"></div>
+        <script>
+            let scrambleCallback = () => {
+                scramble.init();
+            };
 
-        </p>
+            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+        </script>    
+
+        <div class="inner-body-wrapper">
+            <div class="stories-body">
+                <p>This is the page where we will highlight stories. We could include all stories on this page with blurbs and then have a link that leads to
+                    it's own page with the actual video whether that video is embedded onto a page for the website user gets
+                    brought diretly to youtube - there's a couple ways we could set it up. 
+        
+                </p>
+            </div>
+                        
+            <div class="security-wrapper"></div>    
+        </div>
     </div>
 
     <div class="security-wrapper"></div>

@@ -6,22 +6,39 @@
     <title>Finally A Hero</title>
 
     <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/scramble.css" />
 
     <script src="js/templates.js"></script>
+    <script src="js/scramble.js"></script>
 </head>
 <body>
     <div class="nav-wrapper"></div>
     <script>
-        templates.init('navigation.html', '.nav-wrapper', 'donations');
+        templates.initMenu('donations');
     </script>
 
-    <div class="donations-body">
-        <p>
-            This page might be a little more difficult - if anyone knows how to set up a way to take people's 
-            CC information/link to paypal. Another thing we could do is highlight survivor/victims GoFundMe's if 
-            we don't want to take/aren't able to take people's CC info
+    <div class="outer-content">
+        <div class="scramble-wrapper"></div>
+        <script>
+            let scrambleCallback = () => {
+                scramble.init();
+            };
 
-        </p>
+            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+        </script>    
+
+        <div class="inner-body-wrapper">
+            <div class="donations-body">
+                <p>
+                    This page might be a little more difficult - if anyone knows how to set up a way to take people's 
+                    CC information/link to paypal. Another thing we could do is highlight survivor/victims GoFundMe's if 
+                    we don't want to take/aren't able to take people's CC info
+        
+                </p>
+            </div>
+                        
+            <div class="security-wrapper"></div>    
+        </div>
     </div>
 
     <div class="security-wrapper"></div>

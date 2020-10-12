@@ -17,7 +17,7 @@ body {
 }
 
 /* Navigation */
-.nav-wrapper ul {
+ul.nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -34,11 +34,11 @@ body {
   background-color: #4CAF50;
 }
 
-.nav-wrapper li {
+.nav li {
   float: left;
 }
 
-.nav-wrapper li a {
+.nav li a {
   display: block;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -47,14 +47,14 @@ body {
   text-decoration: none;
 }
 
-.nav-wrapper li a:hover {
+.nav li a:hover {
   background-color: #666;
 }
 
-.nav-wrapper li {
+.nav li {
   border-right: 1px solid #bbb;
 }
 
-.nav-wrapper li:last-child {
+.nav li:last-child {
   border-right: none;
 }
