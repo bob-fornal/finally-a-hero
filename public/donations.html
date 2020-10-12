@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finally A Hero</title>
+
+    <link rel="stylesheet" href="css/core.css" />
+
+    <script src="js/templates.js"></script>
 </head>
 <body>
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="stories.html">Survivor Stories</a>
-        <a href="resources.html">Get Help</a>
-        <a href="donations.html">Donate</a>
-        <a href="contact.html">Contact</a>
-    </div>
+    <div class="nav-wrapper"></div>
+    <script>
+        templates.init('navigation.html', '.nav-wrapper', 'donations');
+    </script>
 
     <div class="donations-body">
         <p>
@@ -24,8 +24,11 @@
         </p>
     </div>
 
-    <div class="footer">
-        <p>this can be the footer where we put quick links and links to our social media</p>
-    </div>
+    <div class="security-wrapper"></div>
+    <div class="footer-wrapper"></div>
+    <script>
+        templates.init('security.html', '.security-wrapper');
+        templates.init('footer.html', '.footer-wrapper');
+    </script>
 </body>
 </html>
