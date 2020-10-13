@@ -16,20 +16,11 @@ body {
   text-align: center;
 }
 
-/* Navigation */
-ul.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #f3f3f3;
+.footer p {
+  margin-top: 1rem !important;
 }
 
+/* Navigation */
 .active {
   background-color: #4CAF50;
 }
@@ -49,14 +40,6 @@ ul.nav {
 
 .nav li a:hover {
   background-color: #666;
-}
-
-.nav li {
-  border-right: 1px solid #bbb;
-}
-
-.nav li:last-child {
-  border-right: none;
 }
 
 .container {
