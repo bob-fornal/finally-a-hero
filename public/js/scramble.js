@@ -12,17 +12,27 @@ scramble.init = () => {
   inner.classList.add('cover-content');
   
   const images = [
-    'google-header.png',
-    'coffee-wikipedia.png',
-    'coffee-nca.png',
-    'coffee-amazon.png'
+    { file: 'google-header.png', location: 'https://www.google.com/search?q=coffee&oq=coffee' },
+    { file: 'coffee-wikipedia.png', location: 'https://en.wikipedia.org/wiki/Coffee' },
+    { file: 'coffee-nca.png', location: 'https://www.ncausa.org/About-Coffee/What-is-Coffee' },
+    { file: 'coffee-benefits.png', location: 'https://www.medicalnewstoday.com/articles/270202' },
+    { file: 'coffee-amazon.png', location: 'https://www.amazon.com/coffee/s?k=coffee' },
+    { file: 'coffee-peets.png', location: 'https://www.peets.com/coffee' },
+    { file: 'coffee-stumptown.png', location: 'https://www.stumptowncoffee.com/' },
+    { file: 'coffee-footer.png', location: 'https://www.google.com/search?q=coffee&oq=coffee' }
   ];
   for (let image of images) {
-    const imageLocation = `images/scramble/${ image }`;
+    const imageLocation = `images/scramble/${ image.file }`;
     const imgWrapper = document.createElement('div');
+    
+    const anchor = document.createElement('a');
+    anchor.setAttribute('href', image.location);
+    
     const img = document.createElement('img');
-    img.src = imageLocation;
-    imgWrapper.appendChild(img);
+    img.setAttribute('src', imageLocation);
+    
+    anchor.appendChild(img);
+    imgWrapper.appendChild(anchor);
     inner.appendChild(imgWrapper);
   }
 

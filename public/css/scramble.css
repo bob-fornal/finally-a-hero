@@ -68,8 +68,15 @@
   background-color: white;
   margin: 0;
   padding: 2em;
+
+  overflow-y: auto;
 }
 
 .cover-wrapper.visible {
   display: block;
+}
+
+.exit-scramble {
+  color: tan;
+  font-weight: bold;
 }
