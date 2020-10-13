@@ -25,10 +25,6 @@ body {
   background-color: #4CAF50;
 }
 
-.nav li {
-  float: left;
-}
-
 .nav li a {
   display: block;
   color: black;
@@ -46,6 +42,50 @@ body {
   margin-top: 2rem;
 }
 
-.michelle-profile{
+.michelle-profile {
   width: 100%;
+}
+
+/* Login Page */
+/* Request For Stories */
+.inner-body-wrapper .request-for-stories,
+
+.inner-body-wrapper .login-form,
+.inner-body-wrapper .admin-page {
+  display: none;
+}
+
+.inner-body-wrapper .request-for-stories.visible,
+
+.inner-body-wrapper .login-form.visible,
+.inner-body-wrapper .admin-page.visible {
+  display: block;
+}
+
+.request-for-stories {
+  background-color: palegreen;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.security {
+  background-color: #f2b79f;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.about-body {
+  margin-bottom: 1em;
+}
+
+.security .title {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+p.last {
+  margin-bottom: 0;
 }

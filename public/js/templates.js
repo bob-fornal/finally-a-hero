@@ -6,9 +6,9 @@ templates.init = (filename, elementIdentifier, callback = null) => {
   templates.initFetch(templateLocation, elementIdentifier, callback);
 };
 
-templates.initBody = (name, elementIdentifier) => {
-  const templateLocation = `/templates/body.${ name }.html`;
-  templates.initFetch(templateLocation, elementIdentifier);
+templates.initBody = (name, elementIdentifier, callback = null) => {
+  const templateLocation = `/templates/bodies/body.${ name }.html`;
+  templates.initFetch(templateLocation, elementIdentifier, callback);
 };
 
 

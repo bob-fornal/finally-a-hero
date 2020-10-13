@@ -1,0 +1,43 @@
+.login-form,
+.admin-page {
+  margin: 0 2em;
+  padding: 2em;
+  border: 2px solid silver;
+  border-radius: 10px;
+  max-width: 600px;
+  min-width: 550px;
+}
+
+.login-form .title,
+.admin-page .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-top: 0;
+  padding: 16px;
+}
+
+.container .item {
+  margin-bottom: 1.5em;
+}
+.container .item .field {
+  float: right;
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+.field.custom-select {
+  max-width: 30%;
+}

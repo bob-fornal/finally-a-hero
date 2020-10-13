@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+    <script src="js/request-for-stories.js"></script>
 </head>
 <body>
     <div class="nav-wrapper"></div>
@@ -33,7 +34,11 @@
         <div class="inner-body-wrapper">
             <div class="replace-body"></div>
             <script>
-                templates.initBody('stories', '.replace-body');
+                let bodyCallback = (parsed) => {
+                    requestForStories.init('.request-for-stories', parsed);
+                };
+
+                templates.initBody('stories', '.replace-body', bodyCallback);
             </script>        
                         
             <div class="security-wrapper"></div>    
