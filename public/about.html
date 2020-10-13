@@ -20,23 +20,28 @@
         templates.initMenu('about');
     </script>
 
-    <div class="outer-content">
+    <div class="container outer-content">
         <div class="scramble-wrapper"></div>
         <script>
             let scrambleCallback = () => {
                 scramble.init();
             };
-
             templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
         </script>    
 
         <div class="inner-body-wrapper">
-            <div class="about-body">
-                <p>This page would include part of Michelle's story and why she created Love Me Like a Princess/Finally A Hero.
-                    We would include the mission and explain the origizations goals. Maybe highlight a link for submitting your own story.
-                    I believe the submission for that would be moreso - sending your contact info and then Michelle getting in contact to set something up
-                    rather than someone writing their story and submitting it. 
-                </p>
+            <div class="row about-body">
+                <div class="col-4">
+                    <img src="images/core/placeholder-image.png" class="michelle-profile">
+                </div>
+                <div class="col-8 text-center">
+                    <h3>Michelle's Story</h3>
+                    <p>
+                        Growing up in a small rural town outside of Columbus, Ohio should have been a pleasant experience for a little girl, but it was just the opposite. 
+                        Abuse was welcomed with open arms. With a low self-esteem, I then found myself in an abusive marriage, struggling to find a way out.
+                        I promised God I would empower these women if he saved my life, little did I know, he had me help men, women and children. 
+                    </p>
+                </div>
             </div>
                 
             <div class="security-wrapper"></div>    
