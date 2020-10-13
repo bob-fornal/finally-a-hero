@@ -49,12 +49,10 @@ scramble.trigger = () => {
   const state = [...scramble.cover.classList].includes('visible');
   
   if (state === true) {
-    console.log('visible ...');
     scramble.cover.classList.remove('visible');
-    console.log('not visible ...');
+    scramble.cover.scrollTop = 0;
   } else {
-    console.log('not visible ...');
     scramble.cover.classList.add('visible');
-    console.log('visible ...');
+    scramble.cover.scrollTop = 0;
   }
 };
