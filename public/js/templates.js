@@ -3,7 +3,16 @@ const templates = {};
 
 templates.init = (filename, elementIdentifier, callback = null) => {
   const templateLocation = `/templates/${ filename }`;
+  templates.initFetch(templateLocation, elementIdentifier, callback);
+};
 
+templates.initBody = (name, elementIdentifier) => {
+  const templateLocation = `/templates/body.${ name }.html`;
+  templates.initFetch(templateLocation, elementIdentifier);
+};
+
+
+templates.initFetch = (templateLocation, elementIdentifier, callback = null) => {
   fetch(templateLocation)
     .then(response => response.text())
     .then(html => templates.placeHTML(html, elementIdentifier, callback))
