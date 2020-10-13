@@ -58,3 +58,11 @@ ul.nav {
 .nav li:last-child {
   border-right: none;
 }
+
+.container {
+  margin-top: 2rem;
+}
+
+.michelle-profile{
+  width: 100%;
+}
