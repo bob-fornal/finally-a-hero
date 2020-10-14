@@ -22,9 +22,11 @@ body {
 
 /* Navigation */
 .active {
-  background-color: #4CAF50;
+  text-decoration: overline white !important;
 }
-
+.nav{
+  background-color: rgba(133, 87, 156, 0.89);
+}
 .nav li a {
   display: block;
   color: black;
@@ -35,7 +37,11 @@ body {
 }
 
 .nav li a:hover {
-  background-color: #666;
+  text-decoration: underline white !important;
+}
+
+.navbar-brand, .navbar-brand:hover{
+  color: white;
 }
 
 .container {
