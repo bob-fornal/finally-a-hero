@@ -21,15 +21,24 @@
         templates.initMenu('stories');
     </script>
 
-    <div class="container outer-content">
-        <div class="scramble-wrapper"></div>
-        <script>
-            let scrambleCallback = () => {
-                scramble.init();
-            };
+<div class="container-fluid main-body">
 
-            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
-        </script>    
+    <div class="row scramble-security">
+        <div class="col-2 scramble-button">
+            <div class="scramble-wrapper"></div>
+            <script>
+                let scrambleCallback = () => {
+                    scramble.init();
+                };
+        
+                templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+            </script> 
+        </div>
+
+        <div class="col-9">
+            <div class="security-wrapper"></div> 
+        </div>
+    </div>  
 
         <div class="inner-body-wrapper">
             <div class="security-wrapper"></div>

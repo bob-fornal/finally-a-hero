@@ -1,11 +1,3 @@
-
-.outer-content {
-  display: flex;
-  align-items: stretch;
-  align-content: space-between;
-  margin-top: 2rem;
-}
-
 .scramble-me {
   margin-right: 1em;
 }

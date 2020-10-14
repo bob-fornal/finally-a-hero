@@ -20,27 +20,34 @@
         templates.initMenu('resources');
     </script>
 
-    <div class="container outer-content">
-        <div class="scramble-wrapper"></div>
-        <script>
-            let scrambleCallback = () => {
-                scramble.init();
-            };
+    <div class="container-fluid main-body">
 
-            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
-        </script>    
-
-        <div class="inner-body-wrapper">
-            <div class="security-wrapper"></div>
+        <div class="row scramble-security">
+            <div class="col-2 scramble-button">
+                <div class="scramble-wrapper"></div>
+                <script>
+                    let scrambleCallback = () => {
+                        scramble.init();
+                    };
             
+                    templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+                </script> 
+            </div>
+
+            <div class="col-9">
+                <div class="security-wrapper"></div> 
+            </div>
+        </div>
+
+        <div class="inner-body-wrapper">  
             <div class="replace-body"></div>
             <script>
                 templates.initBody('resources', '.replace-body');
             </script>           
         </div>
+
     </div>
 
-    <div class="security-wrapper"></div>
     <div class="footer-wrapper"></div>
     <script>
         templates.init('security.html', '.security-wrapper');
