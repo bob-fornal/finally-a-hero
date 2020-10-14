@@ -20,35 +20,40 @@
     <script>
         templates.initMenu('index');
     </script>
-
-
-    <div class="container outer-content">
-        <div class="scramble-wrapper"></div>
-        <script>
-            let scrambleCallback = () => {
-                scramble.init();
-            };
     
-            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
-        </script>    
+    <div class="container-fluid main-body">
+
+        <div class="row scramble-security">
+            <div class="col-2 scramble-button">
+                <div class="scramble-wrapper"></div>
+                <script>
+                    let scrambleCallback = () => {
+                        scramble.init();
+                    };
+            
+                    templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+                </script> 
+            </div>
+
+            <div class="col-9">
+                <div class="security-wrapper"></div> 
+            </div>
+        </div>
 
         <div class="inner-body-wrapper">
-            <div class="security-wrapper"></div> 
             <div class="replace-body"></div>
             <script>
                 templates.initBody('index', '.replace-body');
             </script>           
         </div>
+
     </div>
 
     <div class="footer-wrapper"></div>
-
-
     <script>
         templates.init('security.html', '.security-wrapper');
         templates.init('footer.html', '.footer-wrapper');
     </script>
-
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.23.0/firebase-app.js"></script>

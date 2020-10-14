@@ -19,19 +19,26 @@
     <script>
         templates.initMenu('contact');
     </script>
+    <div class="container-fluid main-body">
 
-    <div class="container outer-content">
-        <div class="scramble-wrapper"></div>
-        <script>
-            let scrambleCallback = () => {
-                scramble.init();
-            };
+        <div class="row scramble-security">
+            <div class="col-2 scramble-button">
+                <div class="scramble-wrapper"></div>
+                <script>
+                    let scrambleCallback = () => {
+                        scramble.init();
+                    };
+            
+                    templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+                </script> 
+            </div>
 
-            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
-        </script>    
+            <div class="col-9">
+                <div class="security-wrapper"></div> 
+            </div>
+        </div>  
 
         <div class="inner-body-wrapper">
-            <div class="security-wrapper"></div>
             <div class="replace-body"></div>
             <script>
                 templates.initBody('contact', '.replace-body');
