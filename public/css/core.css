@@ -12,7 +12,7 @@ body {
 .main-body{ 
   align-items: stretch;
   align-content: space-between;
-  margin-top: 2rem;
+  margin-top: 6rem;
   position: relative;
   padding-bottom: 150px;
 }
@@ -22,9 +22,8 @@ body {
 }
 
 /* Footer */
-
 .footer {
-  background-color: rgba(133, 87, 156, 0.89);
+  background-color: rgba(133, 87, 156, 1);
   color: white;
   width: 100%;
   text-align: center;
@@ -41,11 +40,16 @@ body {
   text-decoration: overline white !important;
 }
 .nav{
-  background-color: rgba(133, 87, 156, 0.89);
+  background-color: rgba(133, 87, 156, 1);
   -webkit-box-shadow: 10px 3px 15px rgba(0, 0, 0, .3);
   -moz-box-shadow:    10px 3px 15px rgba(0, 0, 0, .3);
   box-shadow:         10px 3px 15px rgba(0, 0, 0, .3);
   z-index:999;
+
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .nav li a {
   display: block;
@@ -176,16 +180,14 @@ body {
   color: black;
 }
 
-.know-the-signs-blurb, .get-help-blurb{
-  background-color: rgba(133, 87, 156, 0.89);
-  padding: 3rem;
+.blurb {
+  background-color:lightgoldenrodyellow;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
-
-.know-the-signs-blurb{
-  margin-right: 1rem;
-}
-.get-help-blurb{
-  margin-left: .9rem;
+.margin-top {
+  margin-top: 1rem;
 }
 
 .contact-body {

@@ -1,6 +1,6 @@
 .login-form,
 .admin-page {
-  margin: 0 2em;
+  margin: 0 auto;
   padding: 2em;
   border: 2px solid silver;
   border-radius: 10px;
