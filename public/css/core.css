@@ -26,6 +26,10 @@ body {
 }
 .nav{
   background-color: rgba(133, 87, 156, 0.89);
+  -webkit-box-shadow: 10px 3px 15px rgba(0, 0, 0, .3);
+  -moz-box-shadow:    10px 3px 15px rgba(0, 0, 0, .3);
+  box-shadow:         10px 3px 15px rgba(0, 0, 0, .3);
+  z-index:999;
 }
 .nav li a {
   display: block;
@@ -42,10 +46,6 @@ body {
 
 .navbar-brand, .navbar-brand:hover{
   color: white;
-}
-
-.container {
-  margin-top: 2rem;
 }
 
 .michelle-profile {
@@ -78,7 +78,6 @@ body {
 
 .security {
   background-color: #f2b79f;
-  border: 1px solid silver;
   border-radius: 5px;
   margin-bottom: 1em;
 }
@@ -95,4 +94,62 @@ body {
   font-size: small;
   margin-bottom: 0;
   padding: .3em;
+}
+
+/* index - jumbotron */
+.welcome-body .jumbotron{
+  background-color: rgba(133, 87, 156, 0.89);
+}
+
+.display-4{
+  color: white;
+}
+
+/* index - cards */
+
+.row .card {
+  position: relative;
+  width: 50%;
+  border: none;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(133, 87, 156, 1);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text:hover{
+  text-decoration: underline white;
+  color: black;
+
 }
