@@ -172,5 +172,16 @@ body {
 .overlay-text:hover{
   text-decoration: underline white;
   color: black;
+}
 
+.know-the-signs-blurb, .get-help-blurb{
+  background-color: rgba(133, 87, 156, 0.89);
+  padding: 3rem;
+}
+
+.know-the-signs-blurb{
+  margin-right: 1rem;
+}
+.get-help-blurb{
+  margin-left: 1rem;
 }
