@@ -237,3 +237,6 @@ body {
   color: white;
 }
 
+.jumbotron {
+  padding: 2em !important;
+}
