@@ -22,78 +22,86 @@
         templates.initMenu('login');
     </script>
 
-
     <div class="container-fluid outer-content main-body">
-        <div class="scramble-wrapper"></div>
-        <script>
-            let scrambleCallback = () => {
-                scramble.init();
-            };
-    
-            templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
-        </script>    
-
-        <div class="inner-body-wrapper">
-          <div class="login-form visible">
-            <div class="title">Login</div>
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="button" class="btn btn-success btn-lg btn-block" onclick="login.process()">Login</button>
-              <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
-            </div>
-          </div>
-
-          <div class="admin-page">
-            <div class="title">Administration</div>
-            <div class="container">
-              <div class="item user">
-                <span class="label">User</span>
-                <span class="field user">...</span>
-              </div>
-
-              <div class="item collecting-stories">
-                <span class="label">Collecting Stories</span>
-                
-                <select class="custom-select field collecting-stories">
-                  <option selected value="false">No</option>
-                  <option value="true">Yes</option>
-                </select>
-              </div>
-
-              <div class="item front-page">
-                <span class="label">Front Page</span>
-                <span class="field front-page">
-                  <button type="button" class="btn btn-primary btn-sm">Manage</button>
-                </span>
-              </div>
-
-              <div class="item user">
-                <span class="label">Stories</span>
-                <span class="field stories">
-                  <button type="button" class="btn btn-primary btn-sm">Manage</button>
-                </span>
-              </div>
-
-              <button type="button" class="btn btn-success btn-lg btn-block" onclick="login.saveAndLogout()">Save And Logout</button>
-            </div>
-          </div>
-
-          <script src="js/login-handler.js"></script>
-          <script>
-            login.init();
-          </script>
+      <div class="row scramble-security">
+        <div class="col-2 scramble-button">
+            <div class="scramble-wrapper"></div>
+            <script>
+                let scrambleCallback = () => {
+                    scramble.init();
+                };
+        
+                templates.init('scramble.html', '.scramble-wrapper', scrambleCallback);
+            </script> 
         </div>
+
+        <div class="col-9">
+            <div class="security-wrapper"></div> 
+        </div>
+      </div>
+
+      <div class="inner-body-wrapper">
+        <div class="login-form visible">
+          <div class="title">Login</div>
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+        
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="login.process()">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+        </div>
+
+        <div class="admin-page">
+          <div class="title">Administration</div>
+          <div class="container">
+            <div class="item user">
+              <span class="label">User</span>
+              <span class="field user">...</span>
+            </div>
+
+            <div class="item collecting-stories">
+              <span class="label">Collecting Stories</span>
+              
+              <select class="custom-select field collecting-stories">
+                <option selected value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+            </div>
+
+            <div class="item front-page">
+              <span class="label">Front Page</span>
+              <span class="field front-page">
+                <button type="button" class="btn btn-primary btn-sm">Manage</button>
+              </span>
+            </div>
+
+            <div class="item user">
+              <span class="label">Stories</span>
+              <span class="field stories">
+                <button type="button" class="btn btn-primary btn-sm">Manage</button>
+              </span>
+            </div>
+
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="login.saveAndLogout()">Save And Logout</button>
+          </div>
+        </div>
+
+        <script src="js/login-handler.js"></script>
+        <script>
+          login.init();
+        </script>
+      </div>
     </div>
 
     <div class="footer-wrapper"></div>
     <script>
+        templates.init('security.html', '.security-wrapper');
         templates.init('footer.html', '.footer-wrapper');
     </script>
 
