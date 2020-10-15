@@ -12,21 +12,22 @@ scramble.init = () => {
   inner.classList.add('cover-content');
   
   const images = [
-    { file: 'google-header.png', location: 'https://www.google.com/search?q=coffee&oq=coffee' },
-    { file: 'coffee-wikipedia.png', location: 'https://en.wikipedia.org/wiki/Coffee' },
-    { file: 'coffee-nca.png', location: 'https://www.ncausa.org/About-Coffee/What-is-Coffee' },
-    { file: 'coffee-benefits.png', location: 'https://www.medicalnewstoday.com/articles/270202' },
-    { file: 'coffee-amazon.png', location: 'https://www.amazon.com/coffee/s?k=coffee' },
-    { file: 'coffee-peets.png', location: 'https://www.peets.com/coffee' },
-    { file: 'coffee-stumptown.png', location: 'https://www.stumptowncoffee.com/' },
-    { file: 'coffee-footer.png', location: 'https://www.google.com/search?q=coffee&oq=coffee' }
+    { file: 'google-header.webp', location: 'https://www.google.com/search?q=coffee&oq=coffee' },
+    { file: 'coffee-wikipedia.webp', location: 'https://en.wikipedia.org/wiki/Coffee' },
+    { file: 'coffee-nca.webp', location: 'https://www.ncausa.org/About-Coffee/What-is-Coffee' },
+    { file: 'coffee-benefits.webp', location: 'https://www.medicalnewstoday.com/articles/270202' },
+    { file: 'coffee-amazon.webp', location: 'https://www.amazon.com/coffee/s?k=coffee' },
+    { file: 'coffee-peets.webp', location: 'https://www.peets.com/coffee' },
+    { file: 'coffee-stumptown.webp', location: 'https://www.stumptowncoffee.com/' },
+    { file: 'coffee-footer.webp', location: 'https://www.google.com/search?q=coffee&oq=coffee' }
   ];
   for (let image of images) {
     const imageLocation = `images/scramble/${ image.file }`;
     const imgWrapper = document.createElement('div');
     
     const anchor = document.createElement('a');
-    anchor.setAttribute('href', image.location);
+    anchor.setAttribute('href', '#');
+    anchor.setAttribute('onclick', `anchor.navigate(event, '${ image.location }')`);
     
     const img = document.createElement('img');
     img.setAttribute('src', imageLocation);
